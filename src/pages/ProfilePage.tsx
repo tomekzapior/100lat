@@ -28,13 +28,17 @@ export function ProfilePage() {
   useEffect(() => {
     if (!mode) return
     requestAnimationFrame(() => {
+      const flow = flowRef.current
+      if (!flow) return
       const reduceMotion =
         window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false
-      flowRef.current?.scrollIntoView({
+      flow.scrollIntoView({
         behavior: reduceMotion ? 'auto' : 'smooth',
         block: 'start',
       })
-      flowRef.current?.focus({ preventScroll: true })
+      if (!flow.contains(document.activeElement)) {
+        flow.focus({ preventScroll: true })
+      }
     })
   }, [mode])
 
