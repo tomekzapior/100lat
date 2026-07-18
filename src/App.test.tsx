@@ -253,16 +253,16 @@ describe('kluczowe przepływy aplikacji', () => {
     renderApp('/people/person-lena')
 
     await user.click(screen.getByRole('button', { name: /Odczytaj kartkę/i }))
-    const lockPanel = screen.getByRole('heading', {
-      name: 'Twoja kartka czeka, Lena',
-    }).closest('section')
+    const lockPanel = (
+      await screen.findByRole('heading', { name: 'Twoja kartka czeka, Lena' })
+    ).closest('section')
     expect(lockPanel).not.toBeNull()
 
     await user.type(within(lockPanel!).getByLabelText('Kod demo'), '2026')
     await user.click(within(lockPanel!).getByRole('button', { name: 'Otwórz kartkę' }))
 
     expect(
-      screen.getByRole('heading', { name: 'Dobre słowa od zespołu' }),
+      await screen.findByRole('heading', { name: 'Dobre słowa od zespołu' }),
     ).toBeInTheDocument()
     expect(
       screen.getByText(/Za spokój, z którym porządkujesz nawet najbardziej poplątany temat/i),
@@ -294,14 +294,14 @@ describe('kluczowe przepływy aplikacji', () => {
     )
 
     expect(
-      screen.getByRole('heading', { name: 'Życzenia są już na kartce' }),
+      await screen.findByRole('heading', { name: 'Życzenia są już na kartce' }),
     ).toBeInTheDocument()
 
     await user.click(screen.getByRole('button', { name: 'Odczytaj kartkę' }))
-    await user.type(screen.getByLabelText('Kod demo'), '2026')
+    await user.type(await screen.findByLabelText('Kod demo'), '2026')
     await user.click(screen.getByRole('button', { name: 'Otwórz kartkę' }))
 
-    expect(screen.getByText(appreciation)).toBeInTheDocument()
+    expect(await screen.findByText(appreciation)).toBeInTheDocument()
     expect(screen.getByText(wish)).toBeInTheDocument()
     expect(screen.getByText('Nina')).toBeInTheDocument()
     expect(screen.getAllByRole('listitem')).toHaveLength(3)
