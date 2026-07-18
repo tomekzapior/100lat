@@ -1,0 +1,1082 @@
+@media (min-width: 70rem) and (min-height: 40rem) {
+  .home-page {
+    width: min(100%, clamp(88rem, 84vw, 100rem));
+    min-height: calc(100svh - var(--header-height));
+    grid-template-columns: minmax(0, 1.15fr) minmax(27rem, 0.85fr);
+    gap: clamp(1.75rem, 3vw, 3.25rem);
+    align-items: center;
+    padding-block: clamp(1.25rem, 3vh, 2.25rem);
+  }
+
+  @supports (height: 100dvh) {
+    .home-page {
+      min-height: calc(100dvh - var(--header-height));
+    }
+  }
+
+  .birthday-hero__paper {
+    grid-template-columns: minmax(9.5rem, 0.44fr) minmax(0, 1.56fr);
+    gap: clamp(1.75rem, 2.7vw, 3rem);
+    min-height: min(32rem, calc(100svh - 13rem));
+    padding: clamp(1.75rem, 2.5vw, 2.75rem);
+  }
+
+  .date-stamp {
+    width: clamp(8rem, 8vw, 9rem);
+    padding: 1rem;
+  }
+
+  .birthday-hero__title {
+    max-width: 16ch;
+    font-size: clamp(2.75rem, 3.7vw, 4.25rem);
+  }
+
+  .birthday-hero__copy {
+    max-width: 35rem;
+    font-size: 1rem;
+  }
+
+  .home-directory {
+    min-height: 0;
+    grid-template-rows: auto minmax(0, 1fr);
+    align-self: center;
+  }
+
+  .home-directory__header {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .home-directory__heading {
+    font-size: clamp(1.65rem, 2vw, 2.15rem);
+  }
+
+  .home-directory .people-list {
+    max-height: min(34rem, calc(100svh - 15rem));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-color: var(--line-strong) transparent;
+  }
+
+  .home-directory .person-row {
+    grid-template-columns: minmax(0, 1fr) minmax(7rem, 0.55fr) auto;
+    min-height: 4.6rem;
+    gap: 0.7rem;
+    padding: 0.55rem 0.4rem;
+  }
+
+  .home-directory .person-avatar--md {
+    width: 3.15rem;
+    height: 3.15rem;
+    font-size: 0.76rem;
+  }
+
+  .home-directory .person-row__main {
+    gap: 0.7rem;
+  }
+
+  .home-directory .person-row__nickname,
+  .home-directory .person-row__distance {
+    font-size: 0.78rem;
+  }
+
+  .home-directory .person-row__date {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 70rem) {
+  .about-page {
+    gap: 3rem;
+    padding-block: 1.5rem 3.5rem;
+  }
+
+  .about-page > .back-link {
+    margin-bottom: -1.5rem;
+  }
+
+  .about-hero {
+    grid-template-columns: minmax(0, 1.08fr) minmax(20rem, 0.92fr);
+    grid-template-areas:
+      'eyebrow eyebrow'
+      'title copy'
+      'title tech';
+    gap: 0.9rem clamp(2rem, 4vw, 4rem);
+    align-items: end;
+    padding: clamp(2rem, 3vw, 2.75rem);
+  }
+
+  .about-hero .eyebrow {
+    grid-area: eyebrow;
+    margin-bottom: 0;
+  }
+
+  .about-hero h1 {
+    grid-area: title;
+    max-width: 14ch;
+    margin: 0;
+    font-size: clamp(3.2rem, 4vw, 4rem);
+  }
+
+  .about-hero > p:not(.eyebrow) {
+    grid-area: copy;
+    margin: 0;
+  }
+
+  .about-hero .tech-line {
+    grid-area: tech;
+    margin-top: 0;
+  }
+
+  .decision-grid {
+    grid-template-columns: minmax(17rem, 0.65fr) minmax(0, 1.35fr);
+    column-gap: clamp(2.5rem, 5vw, 5rem);
+  }
+
+  .section-heading--wide {
+    grid-row: 1 / span 4;
+    grid-column: 1;
+    align-self: start;
+    margin: 0;
+  }
+
+  .section-heading--wide h2 {
+    max-width: 13ch;
+    font-size: clamp(2rem, 2.7vw, 2.75rem);
+  }
+
+  .decision-card {
+    grid-column: 2;
+    grid-template-columns: 2.5rem 1.75rem minmax(10rem, 0.7fr) minmax(0, 1.3fr);
+    padding-block: 1rem;
+  }
+
+  .admin-gate {
+    padding-block: clamp(1.25rem, 3vh, 2.25rem);
+  }
+
+  .admin-gate__card {
+    display: grid;
+    width: min(100%, 56rem);
+    grid-template-columns: minmax(0, 0.9fr) minmax(19rem, 1.1fr);
+    grid-template-areas:
+      'mark code'
+      'eyebrow code'
+      'title form'
+      'intro form';
+    gap: 0.65rem 3rem;
+    align-items: start;
+    padding: 2.25rem;
+  }
+
+  .admin-gate__mark {
+    grid-area: mark;
+    width: 3.75rem;
+    height: 3.75rem;
+    margin: 0;
+  }
+
+  .admin-gate__card > .eyebrow {
+    grid-area: eyebrow;
+    margin: 0;
+  }
+
+  .admin-gate h1 {
+    grid-area: title;
+    margin: 0.2rem 0 0;
+    font-size: clamp(3rem, 3.5vw, 3.65rem);
+  }
+
+  .admin-gate__intro {
+    grid-area: intro;
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  .admin-gate__demo-code {
+    grid-area: code;
+    align-self: end;
+    margin: 0;
+  }
+
+  .admin-gate__form {
+    grid-area: form;
+    align-self: start;
+  }
+
+  .admin-page {
+    width: min(100%, 96rem);
+    padding-block: 0.75rem 1rem;
+  }
+
+  .admin-page__masthead {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1.5rem;
+    align-items: end;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--line-strong);
+  }
+
+  .admin-page__header {
+    gap: 1.25rem;
+    align-items: center;
+    margin: 0;
+  }
+
+  .admin-page__header > div:first-child {
+    max-width: 39rem;
+  }
+
+  .admin-page__header h1 {
+    margin-bottom: 0.3rem;
+    font-size: clamp(2.45rem, 2.8vw, 3rem);
+    line-height: 0.98;
+  }
+
+  .admin-page__header .eyebrow {
+    margin-bottom: 0.25rem;
+  }
+
+  .admin-page__header p:last-child {
+    max-width: 37rem;
+    margin-bottom: 0;
+    font-size: 0.84rem;
+    line-height: 1.35;
+  }
+
+  .admin-page__actions {
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .admin-page__actions .button {
+    min-height: 2.7rem;
+    padding: 0.6rem 0.75rem;
+    font-size: 0.78rem;
+  }
+
+  .admin-page__workspace {
+    height: clamp(30rem, calc(100dvh - 14.5rem), 44rem);
+    grid-template-columns: 20rem minmax(0, 1fr);
+    gap: 1.25rem;
+    margin-top: 0.75rem;
+  }
+
+  .admin-page__workspace--editing {
+    grid-template-columns: 20rem minmax(0, 1fr);
+  }
+
+  .admin-page__directory {
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 0.55rem;
+    overscroll-behavior: contain;
+    scrollbar-color: var(--line-strong) transparent;
+  }
+
+  .admin-page__editor-slot,
+  .admin-page__workspace--editing .admin-page__editor-slot {
+    position: static;
+    height: 100%;
+    min-height: 0;
+  }
+
+  .admin-section-heading {
+    align-items: flex-start;
+    margin-bottom: 0.65rem;
+  }
+
+  .admin-section-heading h2 {
+    font-size: 1.35rem;
+  }
+
+  .admin-count {
+    gap: 0.3rem;
+    padding: 0.35rem 0.45rem;
+    font-size: 0.7rem;
+  }
+
+  .admin-page__people-groups {
+    gap: 1rem;
+  }
+
+  .admin-page__list-heading {
+    padding-bottom: 0.4rem;
+  }
+
+  .admin-page__list-heading h3 {
+    font-size: 0.92rem;
+  }
+
+  .admin-person-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.25rem 0.5rem;
+    padding: 0.5rem 0.35rem;
+    border: 1px solid transparent;
+    border-bottom-color: var(--line);
+    transition:
+      background-color 140ms ease,
+      border-color 140ms ease,
+      transform 140ms ease;
+  }
+
+  .admin-person-row:hover {
+    background: var(--paper-raised);
+  }
+
+  .admin-person-row--selected {
+    border-color: var(--ink);
+    background: var(--sun-soft);
+    box-shadow: 3px 3px 0 var(--ink);
+    transform: translate(-1px, -1px);
+  }
+
+  .admin-person-row__identity {
+    grid-column: 1;
+    gap: 0.55rem;
+  }
+
+  .admin-person-row__identity .person-avatar--sm {
+    width: 2.45rem;
+    height: 2.45rem;
+    font-size: 0.6rem;
+  }
+
+  .admin-person-row__identity span,
+  .admin-person-row__meta time {
+    font-size: 0.72rem;
+  }
+
+  .admin-person-row__meta {
+    grid-row: 2;
+    grid-column: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    align-items: center;
+    padding-left: 3rem;
+  }
+
+  .admin-person-row__actions {
+    grid-row: 1 / span 2;
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 2.45rem);
+    align-self: center;
+  }
+
+  .admin-person-row__actions .button {
+    width: 2.45rem;
+    min-height: 2.45rem;
+    gap: 0;
+    padding: 0;
+    overflow: hidden;
+    font-size: 0;
+  }
+
+  .admin-person-row__actions .button svg {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .admin-page__idle-panel,
+  .person-editor {
+    height: 100%;
+  }
+
+  .admin-page__idle-panel {
+    display: grid;
+    align-content: center;
+    justify-items: start;
+  }
+
+  .admin-page__idle-panel h2 {
+    max-width: 16ch;
+    font-size: 2rem;
+  }
+
+  .admin-page__idle-panel p:not(.eyebrow) {
+    max-width: 32rem;
+    font-size: 0.9rem;
+  }
+
+  .person-editor {
+    display: grid;
+    min-height: 0;
+    grid-template-rows: auto minmax(0, 1fr);
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 5px 5px 0 var(--ink);
+  }
+
+  .person-editor__heading {
+    margin: 0;
+    padding: 0.9rem 1.2rem;
+    border-bottom: 1px solid var(--line-strong);
+    background: var(--paper);
+  }
+
+  .person-editor__heading h2,
+  .admin-page__workspace--editing .person-editor__heading h2 {
+    margin-bottom: 0.25rem;
+    font-size: 1.55rem;
+  }
+
+  .person-editor__intro {
+    max-width: 46rem;
+    font-size: 0.78rem;
+  }
+
+  .person-editor__form,
+  .admin-page__workspace--editing .person-editor__form {
+    display: grid;
+    min-height: 0;
+    grid-template-columns: 14.25rem minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr) auto;
+    gap: 0;
+    overflow: hidden;
+  }
+
+  .person-editor__preview {
+    grid-row: 1 / -1;
+    grid-column: 1;
+    grid-template-columns: minmax(0, 1fr);
+    align-content: start;
+    justify-items: start;
+    gap: 0.7rem 1rem;
+    padding: 1rem;
+    overflow-y: auto;
+    border: 0;
+    border-right: 1px solid var(--line-strong);
+    border-radius: 0;
+    background: var(--sun-soft);
+  }
+
+  .person-editor__preview-date {
+    padding-block: 0.6rem;
+  }
+
+  .person-editor__preview-story {
+    min-height: 0;
+  }
+
+  .person-editor__preview-avatar .person-avatar--lg {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+
+  .person-editor__preview-copy strong {
+    font-size: 1.35rem;
+  }
+
+  .person-editor__preview-copy,
+  .person-editor__preview-date,
+  .person-editor__preview-story,
+  .person-editor__preview-badges {
+    width: 100%;
+  }
+
+  .person-editor__sections {
+    grid-row: 1;
+    grid-column: 2;
+    min-height: 0;
+    padding: 0 1.2rem 1rem;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-color: var(--line-strong) transparent;
+  }
+
+  .person-editor__section {
+    grid-template-columns: 7.4rem minmax(0, 1fr);
+    gap: 1rem;
+    padding-block: 1rem;
+  }
+
+  .person-editor__section:first-of-type {
+    padding-top: 1rem;
+  }
+
+  .person-editor__section-heading {
+    grid-template-columns: 1.8rem minmax(0, 1fr);
+    gap: 0.5rem;
+  }
+
+  .person-editor__section-heading > span {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .person-editor__section-heading p {
+    font-size: 0.7rem;
+  }
+
+  .person-editor__field-grid {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.9fr) minmax(9rem, 0.75fr);
+    gap: 0.75rem;
+  }
+
+  .person-editor__section-content {
+    gap: 0.8rem;
+  }
+
+  .person-editor__section-content > .field textarea {
+    min-height: 5.25rem;
+  }
+
+  .person-editor__appearance-grid {
+    grid-template-columns: minmax(15rem, 1fr) minmax(14rem, 0.85fr);
+    gap: 0.8rem;
+  }
+
+  .person-editor__appearance-grid .tone-options {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .person-editor__appearance-grid .tone-choice {
+    min-height: 2.45rem;
+    padding: 0.35rem 0.45rem;
+    font-size: 0.74rem;
+  }
+
+  .person-editor__upload {
+    align-content: start;
+    padding: 0.75rem;
+  }
+
+  .person-editor__upload-heading p,
+  .person-editor__upload .field__hint {
+    font-size: 0.72rem;
+  }
+
+  .person-editor__upload-actions .button {
+    min-height: 2.45rem;
+    padding: 0.5rem 0.65rem;
+    font-size: 0.72rem;
+  }
+
+  .person-editor__admin-toggle {
+    padding: 0.75rem;
+  }
+
+  .person-editor__actions,
+  .admin-page__workspace--editing .person-editor__actions {
+    grid-row: 2;
+    grid-column: 2;
+    padding: 0.75rem 1.2rem;
+    border-top: 1px solid var(--line-strong);
+    background: var(--paper);
+  }
+
+  .person-editor__actions .button {
+    min-height: 2.7rem;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 62rem) {
+  .app-shell__header-inner {
+    gap: 0.75rem;
+  }
+
+  .app-nav {
+    gap: 0.1rem;
+  }
+
+  .app-nav__link,
+  .app-nav__guide-button {
+    padding-inline: 0.65rem;
+  }
+
+  .birthday-hero__paper {
+    grid-template-columns: minmax(8rem, 0.55fr) minmax(0, 1.6fr);
+    gap: 2rem;
+  }
+
+  .profile-card {
+    gap: 2rem;
+  }
+
+  .decision-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading--wide {
+    grid-column: auto;
+  }
+
+  .admin-page__workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-page__editor-slot {
+    position: static;
+  }
+
+  .admin-page__workspace--editing .admin-page__editor-slot {
+    order: -1;
+    scroll-margin-top: 0.75rem;
+  }
+
+  .admin-page__workspace:not(.admin-page__workspace--editing)
+    .admin-page__editor-slot {
+    display: none;
+  }
+
+  .person-editor__field-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 48rem) {
+  :root {
+    --header-height: 8.5rem;
+  }
+
+  html {
+    scroll-padding-top: 8rem;
+  }
+
+  .app-shell__header-inner {
+    flex-wrap: wrap;
+    min-height: auto;
+  }
+
+  .app-shell__brand-link {
+    width: 100%;
+  }
+
+  .app-nav {
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 0.55rem;
+    border-top: 1px solid var(--line);
+  }
+
+  .app-nav__guide-button {
+    margin-left: 0;
+  }
+
+  .celebration-canvas {
+    inset: 0;
+    height: 100svh;
+  }
+
+  .page-shell,
+  .home-page {
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+  }
+
+  .home-page {
+    gap: 4rem;
+  }
+
+  .birthday-hero {
+    margin: 0;
+  }
+
+  .birthday-hero__paper {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    padding: 1.35rem;
+    box-shadow: 5px 5px 0 var(--ink);
+    transform: none;
+  }
+
+  .date-stamp {
+    width: min(9rem, 42vw);
+  }
+
+  .birthday-hero__side {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 1rem;
+    align-items: center;
+    justify-items: start;
+  }
+
+  .birthday-hero__faces {
+    justify-content: flex-start;
+  }
+
+  .birthday-hero__face.person-avatar {
+    width: 4.25rem;
+    height: 4.25rem;
+    font-size: 0.85rem;
+  }
+
+  .birthday-hero__title {
+    font-size: clamp(2.35rem, 12vw, 3.8rem);
+  }
+
+  .home-directory__header {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+  }
+
+  .person-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.75rem;
+    min-height: 6.25rem;
+  }
+
+  .person-row__birthday {
+    grid-column: 1;
+    padding-left: 3.75rem;
+  }
+
+  .person-row__arrow {
+    grid-row: 1 / span 2;
+    grid-column: 2;
+  }
+
+  .profile-card {
+    grid-template-columns: 1fr;
+    padding: 1.35rem;
+    box-shadow: 5px 5px 0 var(--ink);
+    transform: none;
+  }
+
+  .profile-card__portrait {
+    justify-items: start;
+  }
+
+  .profile-avatar.person-avatar {
+    width: min(14rem, 65vw);
+    height: min(14rem, 65vw);
+  }
+
+  .birthday-sticker {
+    right: auto;
+    left: min(10rem, 48vw);
+  }
+
+  .profile-page__topbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .panel-heading,
+  .about-cta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .wish-panel {
+    padding: 1.25rem;
+    box-shadow: 4px 4px 0 var(--ink);
+  }
+
+  .wish-panel--success {
+    grid-template-columns: 1fr;
+  }
+
+  .wish-panel--success .button-row {
+    grid-column: auto;
+  }
+
+  .radio-card {
+    grid-template-columns: auto 1fr;
+  }
+
+  .radio-card small {
+    grid-column: 2;
+  }
+
+  .wish-note {
+    grid-template-columns: 1fr;
+  }
+
+  .wish-note__body footer {
+    display: grid;
+  }
+
+  .process-strip {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .decision-card {
+    grid-template-columns: 2.25rem 1.75rem minmax(0, 1fr);
+  }
+
+  .decision-card p {
+    grid-column: 3;
+  }
+
+  .about-hero {
+    padding: 1.35rem;
+    box-shadow: 5px 5px 0 var(--ink);
+  }
+
+  .about-hero h1 {
+    font-size: clamp(2.15rem, 10vw, 3rem);
+  }
+
+  .demo-guide__footer {
+    display: grid;
+  }
+
+  .admin-page__header {
+    display: grid;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .admin-page__header h1 {
+    font-size: 2.25rem;
+  }
+
+  .admin-page__header p:last-child {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+  }
+
+  .admin-section-heading h2 {
+    font-size: 1.5rem;
+  }
+
+  .admin-person-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .admin-person-row__meta {
+    align-items: end;
+    justify-items: end;
+  }
+
+  .admin-person-row__actions {
+    grid-column: 1 / -1;
+  }
+
+  .admin-notice {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .admin-notice > .button:not(.admin-notice__close) {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .admin-reminder__sheet {
+    grid-template-columns: 1fr;
+  }
+
+  .person-editor__field-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .person-editor__preview {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.55rem 0.8rem;
+    padding: 0.85rem;
+  }
+
+  .person-editor__preview-avatar {
+    grid-row: 2 / span 2;
+    grid-column: 1;
+  }
+
+  .person-editor__preview-avatar .person-avatar--lg {
+    width: 4.5rem;
+    height: 4.5rem;
+    font-size: 0.95rem;
+  }
+
+  .person-editor__preview-copy {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  .person-editor__preview-date {
+    grid-row: 3;
+    grid-column: 2;
+    padding: 0;
+    border: 0;
+  }
+
+  .person-editor__preview-story {
+    display: -webkit-box;
+    min-height: 0;
+    grid-row: 4;
+    grid-column: 1 / -1;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .person-editor__preview-badges {
+    grid-row: 5;
+  }
+}
+
+@media (max-width: 32rem) {
+  .app-nav {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .app-nav__link,
+  .app-nav__guide-button {
+    min-width: 0;
+    flex-direction: column;
+    gap: 0.15rem;
+    justify-content: center;
+    padding: 0.35rem 0.1rem;
+    font-size: 0.7rem;
+    line-height: 1.15;
+    white-space: nowrap;
+  }
+
+  .button-row,
+  .profile-actions,
+  .birthday-hero__actions {
+    display: grid;
+    width: 100%;
+  }
+
+  .button-row .button,
+  .profile-actions .button,
+  .birthday-hero__actions .button {
+    width: 100%;
+  }
+
+  .birthday-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .birthday-facts > div + div {
+    padding-left: 0;
+    border-top: 1px solid var(--line-strong);
+    border-left: 0;
+  }
+
+  .person-row__name {
+    font-size: 0.9rem;
+  }
+
+  .demo-guide {
+    width: calc(100% - 1rem);
+  }
+
+  .demo-guide__paper {
+    margin: 0.35rem;
+    padding: 1rem;
+    box-shadow: 4px 4px 0 var(--berry);
+  }
+
+  .admin-page__actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-page__actions .button:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .admin-page__actions .button {
+    width: 100%;
+  }
+
+  .admin-person-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .admin-person-row__meta {
+    justify-items: end;
+  }
+
+  .admin-person-row__actions {
+    grid-column: 1 / -1;
+    flex-wrap: wrap;
+  }
+
+  .admin-notice {
+    grid-template-columns: auto 1fr;
+  }
+
+  .admin-notice__close {
+    grid-row: 1;
+    grid-column: 2;
+    justify-self: end;
+  }
+
+  .tone-options {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .person-editor__upload-actions,
+  .person-editor__actions {
+    display: flex;
+  }
+
+  .person-editor__upload-actions .button,
+  .person-editor__actions .button {
+    width: auto;
+  }
+}
+
+@media (min-width: 120rem) {
+  :root {
+    --page-pad: 3rem;
+  }
+
+  .home-page {
+    gap: clamp(2.5rem, 2.6vw, 4rem);
+  }
+
+  .page-shell {
+    padding-top: clamp(2.5rem, 4vh, 4rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .celebration-canvas {
+    display: none;
+  }
+}
+
+@media (hover: none) {
+  .button:hover:not(:disabled),
+  .person-row:hover {
+    transform: none;
+  }
+}
+
+@media (forced-colors: active) {
+  .celebration-canvas {
+    display: none;
+  }
+
+  .button,
+  .person-avatar,
+  .birthday-hero__paper,
+  .profile-card,
+  .wish-panel,
+  .admin-gate__card,
+  .person-editor {
+    border: 2px solid ButtonText;
+    box-shadow: none;
+    forced-color-adjust: auto;
+  }
+
+  :focus-visible {
+    outline: 3px solid Highlight;
+    box-shadow: none;
+  }
+}
